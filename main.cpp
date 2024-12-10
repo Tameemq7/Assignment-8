@@ -21,4 +21,4 @@ int main() {
     std::cout << "Program ended." << std::endl;
 
     return 0;
-}
+};

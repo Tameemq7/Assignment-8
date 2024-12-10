@@ -1,7 +1,7 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-#include"CollegePerson.h"
+#include "CollegePerson.h"
 #include <vector>
 
 void greeting();

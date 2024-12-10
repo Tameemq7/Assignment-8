@@ -11,7 +11,7 @@ void greeting   () {
 
 int recordCount() {
     std::ifstream file("data/data.txt");
-    if (!file.is_open()); {
+    if (!file.is_open()) {
         std::cerr << "Error opening file\n";
         return 0;
     }
