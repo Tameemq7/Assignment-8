@@ -4,10 +4,10 @@
 #include <sstream>
 #include <iomanip>
 
-void greeting   () {
+void greeting() {
     std::cout << "Press Enter to Continue";
     std::cin.get();
-}
+};
 
 int recordCount() {
     std::ifstream file("data/data.txt");
@@ -33,7 +33,7 @@ int recordCount() {
     if (inRecord) ++count;
     file.close();
     return count;
-}
+};
 
 void getInput(std::vector<CollegePerson*>& records) {
     std::ifstream file("data/data.txt");
@@ -74,7 +74,7 @@ void getInput(std::vector<CollegePerson*>& records) {
         records.push_back(person);
     }
     file.close();
-}
+};
 
 void calcGrades(std::vector<CollegePerson*>& records) {
     for (auto* person : records) {
@@ -91,7 +91,7 @@ void calcGrades(std::vector<CollegePerson*>& records) {
         else if (grade > 60) { person->setGpa(1.0); person->setLetterGrade("D"); }
         else { person->setGpa(0.0); person->setLetterGrade("F"); }
     }
-}
+};
 
 void display(const std::vector<CollegePerson*>& records) {
     std::cout << std::left << std::setw(15) << "University"
@@ -125,4 +125,4 @@ void display(const std::vector<CollegePerson*>& records) {
                   <<std::setw(15) << person->getLetterGrade() << '\n';
         }
     }
-}
+};

@@ -1,11 +1,24 @@
-#include "Person.h"
+#include <iostream>
+#include <vector>
+#include "Functions.h"
+#include "CollegePerson.h"
 
-Person::Person() : name(""), age(0){}
+int main() {
+    std::vector<CollegePerson*> records;
 
-Person::Person(const std::string& name, int age) : name(name), age(age) {}
+    greeting();
 
-std::string Person::getName() const {return name; }
-int Person::getAge() const { return age; }
+    getInput(records);
 
-void Person::setName(const std::string& name) { this->name = name; }
-void Person::setAge(int age) { this->age = age; }
+    calcGrades(records);
+
+    display(records);
+
+    for(auto* person : records) {
+        delete person;
+    }
+
+    std::cout << "Program ended." << std::endl;
+
+    return 0;
+};
