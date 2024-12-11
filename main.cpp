@@ -14,6 +14,8 @@ int main() {
 
     display(records);
 
+
+
     for(auto* person : records) {
         delete person;
     }
